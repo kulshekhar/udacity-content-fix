@@ -64,7 +64,7 @@ var XInterceptor = (function () {
 XInterceptor.processors = [];
 window['XMLHttpRequest'] = XInterceptor;
 XInterceptor.addProcessor(function (s) {
-    if (s) {
+    if (s && window.location.href.indexOf('classroom.udacity.com/nanodegrees/nd101/') > 0) {
         try {
             var o = JSON.parse(s);
             o.data = o.data || {};
