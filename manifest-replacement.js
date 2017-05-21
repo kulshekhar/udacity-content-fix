@@ -69,7 +69,6 @@ XInterceptor.addProcessor(function (s) {
             var o = JSON.parse(s);
             o.data = o.data || {};
             if (o.data.user) {
-                o.data.user.can_see_professional_profile = true;
                 if (!o.data.user.nanodegrees) {
                     o.data.user.nanodegrees = [];
                 }
